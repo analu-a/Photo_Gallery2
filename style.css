@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 90px 1fr 90px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-image: url(./imgMH/fundo.gif);
+    font-family: 'Pacifico', cursive;
+}
+
+.galeria{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    grid-template-areas: 
+    "foto1 foto1 foto1 foto1 foto1 foto2 foto2 foto2 foto3  foto3 foto3"
+    "foto1 foto1 foto1 foto1 foto1  foto4  foto4 foto4 foto5 foto5 foto5"
+    "foto6 foto6 foto6 foto7 foto7  foto7 foto8 foto8 foto8 foto8 foto8";
+
+}
+.photo{
+    color: rgb(146, 5, 146);
+}
+
+.gallery{
+    color: white;
+}
+
+header{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.foto{
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.foto:nth-child(1){
+
+    grid-area: foto1;
+    background-image: url(./imgMH/mo1.jpg);
+    background-position:initial;
+}
+
+.foto:nth-child(2){
+
+    grid-area: foto2;
+    background-image: url(./imgMH/mo2.jpg);
+    background-position:initial;
+}
+
+.foto:nth-child(3){
+
+    grid-area: foto3;
+    background-image: url(./imgMH/mo3.jpg);
+    background-position:initial;
+}
+
+.foto:nth-child(4){
+
+    grid-area: foto4;
+    background-image: url(./imgMH/mo4.jpg);
+    background-position:center;
+}
+
+.foto:nth-child(5){
+
+    grid-area: foto5;
+    background-image: url(./imgMH/mo5.jpg);
+    background-position:initial;
+}
+
+.foto:nth-child(6){
+
+    grid-area: foto6;
+    background-image: url(./imgMH/mo6.jpg);
+    background-position:i;
+}
+
+.foto:nth-child(7){
+
+    grid-area: foto7;
+    background-image: url(./imgMH/mo7.jpg);
+    background-position:center;
+}
+
+.foto:nth-child(8){
+
+    grid-area: foto8;
+    background-image: url(./imgMH/mo8.jpg);
+    background-position:center;
+}
+
+.foto__info{
+
+    position: absolute;;
+    width: 100%;
+    height: 48px;
+    bottom: 0;
+    background-color: #0009;
+    transform: translateY(100%);
+    transition: 1s;
+    color: violet;
+}
+
+.foto:hover > .foto__info{
+
+    transform: translateY(0%);
+}
+
+@media (max-width:768px){
+    body{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+.galeria{
+
+    display: flex;
+    flex-direction: column;
+}
+.foto{
+    width: 100%;
+    height: 33vh;
+}
+}
